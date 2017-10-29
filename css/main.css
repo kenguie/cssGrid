@@ -3,34 +3,29 @@
 	display: grid;
 
 	grid-template: 100px 100px 100px 
-		/ repeat(8, 250px);
-
-	grid-template-areas: 
-		"E E A"
-		"B C A"
-		"F D A"
+		/ repeat(8, [col] 250px);
 }
 
 .grid div:nth-child(1) {
-	grid-area: A;
+	grid-column: 1 / span 8;
 }
 
 .grid div:nth-child(2) {
-	grid-area: B;
+	grid-column: col 3 / col 7;
 }
 
 .grid div:nth-child(3) {
-	grid-area: C;
+	grid-column: 1 / span 8;
 }
 
 .grid div:nth-child(4) {
-	grid-area: D;
+	grid-column: 1 / span 8;
 }
 
 .grid div:nth-child(5) {
-	grid-area: E;
+	grid-column: 1 / span 8;
 }
 
 .grid div:nth-child(6) {
-	grid-area: F;
+	grid-column: 1 / span 8;
 }
